@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OM MURUGA WATER SUPPLY | 24/7 Water Delivery Service</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="nav-logo">
+                <div class="logo-text">
+                    <span class="brand-title">OM MURUGA</span>
+                    <span class="brand-sub">WATER SUPPLY</span>
+                </div>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#booking" class="nav-link">Book Now</a></li>
+                <li class="nav-item"><a href="#capacities" class="nav-link">Tanker Capacity</a></li>
+                <li class="nav-item"><a href="#why-us" class="nav-link">Why Choose Us</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item nav-btn-item">
+                    <a href="#booking" class="btn btn-nav"><i class="fa-solid fa-truck-droplet"></i> Quick Book</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-bg-overlay"></div>
+            
+            <!-- Animated Water Drops -->
+            <div class="water-drops">
+                <div class="drop d1"></div>
+                <div class="drop d2"></div>
+                <div class="drop d3"></div>
+                <div class="drop d4"></div>
+                <div class="drop d5"></div>
+            </div>
+
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">OM MURUGA WATER SUPPLY</h1>
+                    <p class="hero-tagline">24/7 Water Supply • Any Time • Any Where</p>
+                    <p class="hero-description">
+                        Fast, hygienic, and reliable water tanker delivery for domestic, commercial, construction, and bulk requirements. Delivering pure quality water straight to your doorstep.
+                    </p>
+                    
+                    <div class="hero-cta">
+                        <a href="#booking" class="btn btn-primary btn-ripple"><i class="fa-solid fa-calendar-check"></i> Book Water Now</a>
+                        <a href="tel:+917395922095" class="btn btn-outline btn-ripple phone-link"><i class="fa-solid fa-phone-volume"></i> Call Now</a>
+                    </div>
+
+                    <!-- Highlight Badges -->
+                    <div class="hero-highlights">
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <span>Fast Delivery</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-faucet-drip"></i>
+                            <span>Quality Water</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>24/7 Service</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wave Animations -->
+            <div class="wave-container">
+                <div class="wave wave1"></div>
+                <div class="wave wave2"></div>
+                <div class="wave wave3"></div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section id="booking" class="section booking-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Online Tanker Reservation</span>
+                    <h2 class="section-title">Book Your Water Tanker</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="booking-wrapper">
+                    <!-- Booking Form -->
+                    <div class="booking-card glass-card">
+                        <form id="waterBookingForm" novalidate>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="custName"><i class="fa-solid fa-user"></i> Full Name *</label>
+                                    <input type="text" id="custName" placeholder="e.g. Rajesh Kumar" required>
+                                    <span class="error-msg" id="err-name">Please enter your full name</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="custPhone"><i class="fa-solid fa-phone"></i> Contact Phone Number *</label>
+                                    <input type="tel" id="custPhone" placeholder="10-digit Mobile Number" pattern="[0-9]{10}" required>
+                                    <span class="error-msg" id="err-phone">Please enter a valid 10-digit phone number</span>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="custLocation"><i class="fa-solid fa-location-dot"></i> Delivery Address / Location *</label>
+                                    <textarea id="custLocation" rows="2" placeholder="Street Address, Area, Landmark, City" required></textarea>
+                                    <span class="error-msg" id="err-location">Please enter the complete delivery location</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="tankerCapacity"><i class="fa-solid fa-fill-drip"></i> Tanker Capacity *</label>
+                                    <select id="tankerCapacity" required>
+                                        <option value="" disabled selected>Select Capacity</option>
+                                        <option value="2,500 L">2,500 Litres (Small/Residential)</option>
+                                        <option value="5,000 L">5,000 Litres (Medium Domestic)</option>
+                                        <option value="10,000 L">10,000 Litres (Large Domestic/Commercial)</option>
+                                        <option value="12,000 L">12,000 Litres (Commercial)</option>
+                                        <option value="24,000 L">24,000 Litres (Bulk/Construction)</option>
+                                        <option value="26,000 L">26,000 Litres (Industrial)</option>
+                                        <option value="30,000 L">30,000 Litres (Bulk Industrial)</option>
+                                        <option value="36,000 L">36,000 Litres (Heavy Duty Fleet)</option>
+                                    </select>
+                                    <span class="error-msg" id="err-capacity">Please select a tanker capacity</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="deliveryDate"><i class="fa-solid fa-calendar-day"></i> Delivery Date *</label>
+                                    <input type="date" id="deliveryDate" required>
+                                    <span class="error-msg" id="err-date">Please select a valid future date</span>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block btn-lg btn-ripple">
+                                <i class="fa-brands fa-whatsapp"></i> BOOK NOW VIA WHATSAPP
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Simulated Owner Auto-Reply & Live Status UI -->
+                    <div class="booking-status-side">
+                        <div class="status-box glass-card">
+                            <h3><i class="fa-solid fa-paper-plane"></i> Quick Dispatch Desk</h3>
+                            <p>Submitting the form automatically opens your WhatsApp app with a pre-filled booking order direct to our dispatch office.</p>
+                            
+                            <!-- WhatsApp Simulation Widget -->
+                            <div class="whatsapp-sim" id="whatsappSim">
+                                <div class="wa-header">
+                                    <div class="wa-avatar"><i class="fa-solid fa-user-shield"></i></div>
+                                    <div class="wa-info">
+                                        <h4>OM MURUGA WATER SUPPLY</h4>
+                                        <p class="wa-status"><span class="online-dot"></span> Online • 24/7 Auto Dispatch</p>
+                                    </div>
+                                </div>
+                                <div class="wa-body" id="waChatBody">
+                                    <div class="wa-msg wa-msg-system">
+                                        Fill in the form to generate your automated order statement.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tanker Capacity Section -->
+        <section id="capacities" class="section bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Fleet Selection</span>
+                    <h2 class="section-title">Available Tanker Capacities</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="capacities-grid">
+                    <!-- Tanker 1 -->
+                    <div class="capacity-card glass-card">
+                        <div class="capacity-img-wrapper">
+                            <i class="fa-solid fa-truck-monster tanker-icon"></i>
+                        </div>
+                        <div class="capacity-content">
+                            <h3>2,500 Litres Tanker</h3>
+                            <p>Ideal for small households, emergency top-ups, and narrow street access.</p>
+                            <button class="btn btn-secondary btn-sm select-capacity-btn" data-capacity="2,500 L">Book Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Tanker 2 -->
+                    <div class="capacity-card glass-card">
+                        <div class="capacity-img-wrapper">
+                            <i class="fa-solid fa-truck-pickup tanker-icon"></i>
+                        </div>
+                        <div class="capacity-content">
+                            <h3>5,000 Litres Tanker</h3>
+                            <p>Perfect for medium-sized residential homes, villas, and small stores.</p>
+                            <button class="btn btn-secondary btn-sm select-capacity-btn" data-capacity="5,000 L">Book Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Tanker 3 -->
+                    <div class="capacity-card glass-card">
+                        <div class="capacity-img-wrapper">
+                            <i class="fa-solid fa-truck-moving tanker-icon"></i>
+                        </div>
+                        <div class="capacity-content">
+                            <h3>10,000 Litres Tanker</h3>
+                            <p>Popular choice for apartment complexes, restaurants, and hotels.</p>
+                            <button class="btn btn-secondary btn-sm select-capacity-btn" data-capacity="10,000 L">Book Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Tanker 4 -->
+                    <div class="capacity-card glass-card">
+                        <div class="capacity-img-wrapper">
+                            <i class="fa-solid fa-truck-moving tanker-icon"></i>
+                        </div>
+                        <div class="capacity-content">
+                            <h3>12,000 Litres Tanker</h3>
+                            <p>Heavy domestic and commercial usage water tanker supply.</p>
+                            <button class="btn btn-secondary btn-sm select-capacity-btn" data-capacity="12,000 L">Book Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Tanker 5 -->
+                    <div class="capacity-card glass-card">
+                        <div class="capacity-img-wrapper">
+                            <i class="fa-solid fa-truck-front tanker-icon"></i>
+                        </div>
+                        <div class="capacity-content">
+                            <h3>24,000 Litres Tanker</h3>
+                            <p>Suitable for construction sites, commercial setups, and large events.</p>
+                            <button class="btn btn-secondary btn-sm select-capacity-btn" data-capacity="24,000 L">Book Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Tanker 6 -->
+                    <div class="capacity-card glass-card">
+                        <div class="capacity-img-wrapper">
+                            <i class="fa-solid fa-truck-front tanker-icon"></i>
+                        </div>
+                        <div class="capacity-content">
+                            <h3>26,000 Litres Tanker</h3>
+                            <p>Industrial scale bulk water requirement delivery.</p>
+                            <button class="btn btn-secondary btn-sm select-capacity-btn" data-capacity="26,000 L">Book Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Tanker 7 -->
+                    <div class="capacity-card glass-card">
+                        <div class="capacity-img-wrapper">
+                            <i class="fa-solid fa-truck tanker-icon"></i>
+                        </div>
+                        <div class="capacity-content">
+                            <h3>30,000 Litres Tanker</h3>
+                            <p>Bulk water distribution for IT parks, factories, and huge sites.</p>
+                            <button class="btn btn-secondary btn-sm select-capacity-btn" data-capacity="30,000 L">Book Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Tanker 8 -->
+                    <div class="capacity-card glass-card">
+                        <div class="capacity-img-wrapper">
+                            <i class="fa-solid fa-truck tanker-icon"></i>
+                        </div>
+                        <div class="capacity-content">
+                            <h3>36,000 Litres Tanker</h3>
+                            <p>Maximum capacity fleet supply for large-scale industrial projects.</p>
+                            <button class="btn btn-secondary btn-sm select-capacity-btn" data-capacity="36,000 L">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-us" class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Our Excellence</span>
+                    <h2 class="section-title">Why Choose OM MURUGA WATER SUPPLY?</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon"><i class="fa-solid fa-clock"></i></div>
+                        <h3>24/7 Supply</h3>
+                        <p>Water supply available 24 hours a day, 7 days a week, including holidays.</p>
+                    </div>
+
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <h3>Instant Booking</h3>
+                        <p>Book your required tanker in seconds via our streamlined digital booking portal.</p>
+                    </div>
+
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                        <h3>Fast Delivery</h3>
+                        <p>Reliable and super quick tanker dispatch guaranteed to reach your target point.</p>
+                    </div>
+
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon"><i class="fa-solid fa-tags"></i></div>
+                        <h3>Best Price</h3>
+                        <p>Highly competitive and affordable market pricing without hidden fees.</p>
+                    </div>
+
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon"><i class="fa-solid fa-house-chimney"></i></div>
+                        <h3>Home Delivery</h3>
+                        <p>Clean water tanker delivery directly tailored for residential apartments and houses.</p>
+                    </div>
+
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon"><i class="fa-solid fa-person-digging"></i></div>
+                        <h3>Construction Supply</h3>
+                        <p>Dedicated continuous water supply setup engineered for ongoing construction sites.</p>
+                    </div>
+
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon"><i class="fa-solid fa-building"></i></div>
+                        <h3>Business & Bulk</h3>
+                        <p>Reliable solutions for offices, factories, malls, schools, and large events.</p>
+                    </div>
+
+                    <div class="feature-card glass-card">
+                        <div class="feature-icon"><i class="fa-solid fa-handshake"></i></div>
+                        <h3>Reliable Service</h3>
+                        <p>Professional drivers, maintained tankers, and customer-first support.</p>
+                    </div>
+                </div>
+
+                <!-- Animated Counters Section -->
+                <div class="counters-container glass-card margin-top-lg">
+                    <div class="counter-item">
+                        <i class="fa-solid fa-face-smile"></i>
+                        <h3 class="counter-number" data-target="15000">0</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="counter-item">
+                        <i class="fa-solid fa-truck-droplet"></i>
+                        <h3 class="counter-number" data-target="45000">0</h3>
+                        <p>Tankers Delivered</p>
+                    </div>
+                    <div class="counter-item">
+                        <i class="fa-solid fa-city"></i>
+                        <h3 class="counter-number" data-target="120">0</h3>
+                        <p>Locations Covered</p>
+                    </div>
+                    <div class="counter-item">
+                        <i class="fa-solid fa-award"></i>
+                        <h3 class="counter-number" data-target="15">0</h3>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">What We Offer</span>
+                    <h2 class="section-title">Our Water Supply Services</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card glass-card">
+                        <div class="service-icon"><i class="fa-solid fa-house-user"></i></div>
+                        <h3>Residential Water Supply</h3>
+                        <p>Pure potable water delivered direct to residential sumps and overhead tanks.</p>
+                    </div>
+
+                    <div class="service-card glass-card">
+                        <div class="service-icon"><i class="fa-solid fa-helmet-safety"></i></div>
+                        <h3>Construction Site Supply</h3>
+                        <p>High-volume uninterrupted water supply for concrete curing and site civil works.</p>
+                    </div>
+
+                    <div class="service-card glass-card">
+                        <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+                        <h3>Commercial Water Supply</h3>
+                        <p>Scheduled daily/weekly supply for commercial complexes, IT parks, and hotels.</p>
+                    </div>
+
+                    <div class="service-card glass-card">
+                        <div class="service-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                        <h3>Bulk Water Orders</h3>
+                        <p>High-capacity tanker supply tailored for large scale industrial consumption.</p>
+                    </div>
+
+                    <div class="service-card glass-card">
+                        <div class="service-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+                        <h3>Event Water Supply</h3>
+                        <p>Dedicated temporary water support for weddings, public events, and exhibitions.</p>
+                    </div>
+
+                    <div class="service-card glass-card">
+                        <div class="service-icon"><i class="fa-solid fa-truck-medical"></i></div>
+                        <h3>Emergency Water Supply</h3>
+                        <p>Priority express delivery service during severe water cutoffs or emergency needs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Simple 4-Step Process</span>
+                    <h2 class="section-title">How It Works</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="steps-wrapper">
+                    <div class="step-card">
+                        <div class="step-num">01</div>
+                        <div class="step-icon"><i class="fa-solid fa-filter"></i></div>
+                        <h3>Choose Capacity</h3>
+                        <p>Select the required tanker size according to your exact needs (2,500L to 36,000L).</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-num">02</div>
+                        <div class="step-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+                        <h3>Enter Details</h3>
+                        <p>Provide your name, location, delivery date, preferred time, and contact phone.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-num">03</div>
+                        <div class="step-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <h3>Book Now</h3>
+                        <p>Submit your request to instantly connect with our dispatch center via WhatsApp.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-num">04</div>
+                        <div class="step-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                        <h3>Get Delivery</h3>
+                        <p>Our designated water tanker arrives at your specified location on schedule.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Banner -->
+        <section id="contact" class="cta-banner">
+            <div class="container">
+                <div class="cta-content text-center">
+                    <h2>Need Water? We're Ready 24/7!</h2>
+                    <p class="cta-tagline">Any Time. Any Where. Any Quantity.</p>
+                    <p class="cta-info"><i class="fa-solid fa-location-dot"></i> Serving Chennai, Thiruvallur & Kanchipuram</p>
+                    
+                    <div class="cta-buttons">
+                        <a href="#booking" class="btn btn-primary btn-lg btn-ripple"><i class="fa-solid fa-calendar-check"></i> Book Water Now</a>
+                        <a href="https://wa.me/917395922095" target="_blank" class="btn btn-whatsapp btn-lg btn-ripple wa-direct-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+                        <a href="tel:+917395922095" class="btn btn-outline-light btn-lg btn-ripple phone-link"><i class="fa-solid fa-phone"></i> Call Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="footer-logo">
+                        <span>OM MURUGA WATER SUPPLY</span>
+                    </div>
+                    <p class="tagline">24/7 Water Supply • Any Time • Any Where</p>
+                    <p>Your trusted commercial and residential water delivery partner. Hygienic water guaranteed on every delivery.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+                        <li><a href="#booking"><i class="fa-solid fa-angle-right"></i> Book Water</a></li>
+                        <li><a href="#capacities"><i class="fa-solid fa-angle-right"></i> Tanker Capacities</a></li>
+                        <li><a href="#why-us"><i class="fa-solid fa-angle-right"></i> Why Choose Us</a></li>
+                        <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Our Services</a></li>
+                        <li><a href="#contact"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Tanker Sizes</h4>
+                    <ul class="footer-links">
+                        <li><a href="#booking"><i class="fa-solid fa-droplet"></i> 2,500 Litres</a></li>
+                        <li><a href="#booking"><i class="fa-solid fa-droplet"></i> 5,000 Litres</a></li>
+                        <li><a href="#booking"><i class="fa-solid fa-droplet"></i> 10,000 Litres</a></li>
+                        <li><a href="#booking"><i class="fa-solid fa-droplet"></i> 12,000 Litres</a></li>
+                        <li><a href="#booking"><i class="fa-solid fa-droplet"></i> 24,000+ Litres Bulk</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info-list">
+                        <li><i class="fa-solid fa-phone"></i> <a href="tel:+917395922095" class="phone-link">+91 73959 22095</a></li>
+                        <li><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/917395922095" class="wa-direct-link" target="_blank">+91 73959 22095</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i> Chennai, Thiruvallur, Kanchipuram</li>
+                        <li><i class="fa-solid fa-clock"></i> 24 Hours / 7 Days Open</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 OM MURUGA WATER SUPPLY. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTopBtn" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
