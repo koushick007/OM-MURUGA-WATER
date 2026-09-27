@@ -62,19 +62,34 @@ function setMinBookingDate() {
 function initNavigation() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.nav-link, .btn-nav');
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
+    if (hamburger && navMenu) {
+        const toggleMenu = (open) => {
+            const isActive = open !== undefined ? open : !hamburger.classList.contains('active');
+            hamburger.classList.toggle('active', isActive);
+            navMenu.classList.toggle('active', isActive);
+            document.body.classList.toggle('menu-open', isActive);
+        };
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
         });
-    });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                toggleMenu(false);
+            });
+        });
+
+        // Close on outside click
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !hamburger.contains(e.target) && navMenu.classList.contains('active')) {
+                toggleMenu(false);
+            }
+        });
+    }
 
     // Active Navigation Highlight on Scroll
     window.addEventListener('scroll', () => {
@@ -82,13 +97,14 @@ function initNavigation() {
         const sections = document.querySelectorAll('section');
         
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            if (pageYOffset >= sectionTop) {
+            const sectionTop = section.offsetTop - 120;
+            if (window.pageYOffset >= sectionTop) {
                 current = section.getAttribute('id');
             }
         });
 
-        navLinks.forEach(link => {
+        const allNavLinks = document.querySelectorAll('.nav-link');
+        allNavLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${current}`) {
                 link.classList.add('active');
